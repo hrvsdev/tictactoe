@@ -2,6 +2,7 @@ const signArray = document.querySelectorAll(".main-box");
 const reset = document.querySelector('.reset')
 const text = document.querySelector('.text')
 const dark = document.querySelector('.dark')
+const light = document.querySelector('.light')
 const mainBox = document.querySelectorAll('.main-box')
 
 const winText = document.querySelector('.win-text')
@@ -117,6 +118,19 @@ dark.addEventListener('click', ()=>{
   text.style.color = 'white'
   reset.style.borderColor = 'white'
   dark.style.borderColor = 'white'
+  light.style.borderColor = 'white'
+})
 
+light.addEventListener('click', ()=>{
+  document.body.style.backgroundColor = 'white'
+  mainBox.forEach(border=>{
+    border.style.borderColor = 'black'
+    border.style.color = 'black'
+  })
+  winText.style.color = 'black'
+  text.style.color = 'black'
+  reset.style.borderColor = 'black'
+  dark.style.borderColor = 'black'
+  light.style.borderColor = 'black'
 })
 
